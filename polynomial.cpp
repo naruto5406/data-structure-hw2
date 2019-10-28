@@ -128,18 +128,7 @@ Polynomial Polynomial::operator/(const Polynomial & d)
     
 }  
 
-Polynomial Polynomial::operator/(const Polynomial & b)  
-{  
-    Polynomial c;  
-    for(int i=0; i<terms; i++){  
-        for(int j=0; j<b.terms; j++){  
-            unsigned long coef = termArray[i].coef * b.termArray[j].coef;  
-            int exp = termArray[i].exp + b.termArray[j].exp;  
-            c.NewTerm(coef,exp);  
-        }  
-    }  
-    return c;  
-}  
+
 
 void Polynomial::NewTerm(unsigned long coef, int exp)  
 {  
